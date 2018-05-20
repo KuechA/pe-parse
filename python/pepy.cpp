@@ -1055,7 +1055,9 @@ PEPY_PARSED_GET(signature, Signature)
 PEPY_PARSED_GET(machine, FileHeader.Machine)
 PEPY_PARSED_GET(numberofsections, FileHeader.NumberOfSections)
 PEPY_PARSED_GET(timedatestamp, FileHeader.TimeDateStamp)
+PEPY_PARSED_GET(pointertosymboltable, FileHeader.PointerToSymbolTable)
 PEPY_PARSED_GET(numberofsymbols, FileHeader.NumberOfSymbols)
+PEPY_PARSED_GET(sizeofoptionalheader, FileHeader.SizeOfOptionalHeader)
 PEPY_PARSED_GET(characteristics, FileHeader.Characteristics)
 PEPY_PARSED_GET(magic, OptionalMagic)
 
@@ -1140,7 +1142,9 @@ static PyGetSetDef pepy_parsed_getseters[] = {
     OBJECTGETTER(parsed, machine, "Machine"),
     OBJECTGETTER(parsed, numberofsections, "Number of sections"),
     OBJECTGETTER(parsed, timedatestamp, "Timedate stamp"),
+    OBJECTGETTER(parsed, pointertosymboltable, "Pointer to symbol table"),
     OBJECTGETTER(parsed, numberofsymbols, "Number of symbols"),
+    OBJECTGETTER(parsed, sizeofoptionalheader, "Size of OptionalHeader"),
     OBJECTGETTER(parsed, characteristics, "Characteristics"),
     OBJECTGETTER(parsed, magic, "Magic"),
     OBJECTGETTER_OPTIONAL(majorlinkerver, "Major linker version"),
